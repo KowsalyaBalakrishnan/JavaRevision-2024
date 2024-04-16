@@ -14,3 +14,8 @@ Builder Pattern addresses the above issue
     - Create Clean Code for Object creation by abstracting the place for Object creation
     - Make room for having optional variables being set without Constructor Overloading
 
+Rules:
+    - Do not have public all arguments constructor
+    - Have Private Setters
+    -
+

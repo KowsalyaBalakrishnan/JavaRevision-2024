@@ -4,7 +4,6 @@ import org.patterns.design.gof.creational.builder.request.Address;
 import org.patterns.design.gof.creational.builder.request.User;
 import org.patterns.design.gof.creational.builder.response.UserResponseDTO;
 import org.patterns.design.gof.creational.builder.service.UserResponseBuilder;
-import org.patterns.design.gof.creational.builder.service.UserResponseBuilderImpl;
 
 import java.time.LocalDate;
 
@@ -12,8 +11,9 @@ public class BuilderDirectorMain {
 
     public static void main(String[] args) {
 
-        User user = createUser();
-        UserResponseBuilder builder = new UserResponseBuilderImpl();
+        User user = inputUserRequest();
+        // UserResponseBuilder builder = new UserResponseDTO.UserResponseBuilderImpl();
+        UserResponseBuilder builder = UserResponseDTO.getBuilder();
         UserResponseDTO responseDTO = builder.firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .birthDate(user.getBirthdate())
@@ -24,7 +24,7 @@ public class BuilderDirectorMain {
 
     }
 
-    private static User createUser() {
+    private static User inputUserRequest() {
         Address address = new Address();
         address.setHouseNumber("10");
         address.setStreet("Abirami Nagar");
