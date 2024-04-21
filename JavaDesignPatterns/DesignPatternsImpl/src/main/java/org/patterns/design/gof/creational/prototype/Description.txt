@@ -1,0 +1,12 @@
+Prototype is used to create multiple instances from a base object [Prototype].
+
+This happens whenever we have a complex object that is costly to create multiple times.
+
+To create more such instances of a class, we use an existing instance as our prototype.
+
+It saves us from re-creating objects from scratch
+
+The class will allow to create multiple instance with the help of Clone().
+    - Thus, implement Cloneable interface and override clone() to return the copy of itself
+    - Handle CloneNotSupportedException in throws clause as it helps future subclasses eligibility to clone
+    - Consider if Deep or Shallow copy is required!

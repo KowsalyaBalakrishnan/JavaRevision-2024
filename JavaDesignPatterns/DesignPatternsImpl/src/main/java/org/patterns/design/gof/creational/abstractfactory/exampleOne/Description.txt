@@ -1,0 +1,25 @@
+Abstract Factory is an extension to Factory Pattern
+
+Say, we do manufacture a scooter that has 2 different models
+
+Model A = Alloy Wheels and Blue Color
+Model B = Steel Wheels and White Color
+
+Now the abstraction is as follows
+
+    Root Level Abstraction
+        WheelFactory Interface ->
+            - AlloyWheel Impl
+            - SteelWheel Impl
+        ColorFactory Interface ->
+            - BlueColor Impl
+            - WhiteColor Impl
+
+    Top Level Abstraction
+        ScooterFactory Interface ->
+            - WheelFactory  -> getWheel(WheelType)
+            - ColorFactory  -> getColor(ColorType)
+
+Adding a new category required changes to the base as well as sub factory implementations
+
+We provide the client code with the concrete factory so that it can create objects

@@ -1,0 +1,18 @@
+Factory pattern is to move the object creation logic from our code to a separate class.
+
+We use this pattern when we do not know in advance which
+    - class we may need to instantiate beforehand
+    - It also allow new classes to be added to the system
+The above can handle their creation without affecting client code
+
+We let the subclasses of Factories to create the objects of the corresponding the actual base classes
+    - Meaning, we have a base package type Message - Simple and JSON
+    - When we are to create the objects for the above classes, we create an exact replica of the base as factories
+    - Now, the factory method in subclasses decide which subclass object of base package should be called
+    - This is used in ArrayList JDK
+
+Drawbacks
+    - We end up creating a large number of sub class factories whose job is to create objects for the actuals
+    - Even though factory method pattern has advantage that we don't need to modify existing code of factory method,
+    we often end up writing large number of classes whose only job is to instntiate new products.
+    Although this is a drawback, it outweighs the other option of modifying existing cod

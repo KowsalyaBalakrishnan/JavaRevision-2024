@@ -1,0 +1,10 @@
+Singleton Pattern - One Global Instance
+
+Implementation:-
+    - Class constructors must not be accessed globally to prevent object creation
+    - Subclass or Inheritance is not allowed as it may permit object creation
+    - Create a public static method
+
+2 possible types of Singleton:-
+    1. Early Initialization - Eager Singleton - Create Singleton as soon as the class is loaded
+    2. Lazy Initialization - Lazy Singleton - Create Singleton when required for the first time called

@@ -1,8 +1,8 @@
 Builder Pattern is one of the Creation patterns where it solves the problem of Complex Object Creations
 
 It solves 2 Problems primarily for a class that is having
-    - Many variables
-    - Optional variables to initialize
+    - Many variables to construct in Object
+    - Optional variables to initialize [ Not all arguments are required to build an object ]
 
 As per the clean code design, the constructor shouldn't have more than 5 arguments
 
@@ -14,8 +14,7 @@ Builder Pattern addresses the above issue
     - Create Clean Code for Object creation by abstracting the place for Object creation
     - Make room for having optional variables being set without Constructor Overloading
 
-Rules:
+Rules to achieve Object Immutability:
     - Do not have public all arguments constructor
     - Have Private Setters
-    -
 

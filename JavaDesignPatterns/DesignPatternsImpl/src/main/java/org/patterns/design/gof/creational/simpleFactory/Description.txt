@@ -1,0 +1,1 @@
+Simple Factory Pattern is used to create Objects of a class that is implementing an interface according to a criteria
